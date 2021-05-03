@@ -10,10 +10,8 @@ class Solution:
         # 内存和运行时间优化
         arr = [1] * n
         for i in range(1, m):
-            init = 1
             for j in range(1, n):
-                arr[j] = arr[j] + init
-                init = arr[j]
+                arr[j] = arr[j] + arr[j - 1]
         return arr[n - 1]
 
         # arr = []
