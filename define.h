@@ -6,12 +6,15 @@
 #include <string>
 #include <vector>
 #include <array>
-#include <map>
 #include <set>
+#include <map>
+#include <unordered_set>
+#include <unordered_map>
 #include <queue>
 #include <stack>
 #include <list>
 #include <memory>
+#include <utility>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -54,3 +57,19 @@ public:
     Node(int _val, Node* _left, Node* _right, Node* _next)
         : val(_val), left(_left), right(_right), next(_next) {}
 };
+
+template <class T>
+void printVector(vector<T>& vec) {
+    for (auto&& i : vec) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
+template <class T>
+void printVector(vector<T>&& vec) {
+    for (auto&& i : vec) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
